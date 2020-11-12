@@ -1,43 +1,61 @@
 {
-  "name": "picturegame",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.5",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.19.1",
-    "@types/react": "^16.9.53",
-    "@types/react-dom": "^16.9.8",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.0",
-    "typescript": "^4.0.3",
-    "web-vitals": "^0.2.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "picturegame",
+    "version": "0.1.0",
+    "private": true,
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "scripts": {
+        "start": "craco start",
+        "build": "craco build",
+        "test": "craco test",
+        "eject": "react-scripts eject"
+    },
+    "dependencies": {
+        "@material-ui/core": "4.11.0",
+        "@material-ui/icons": "4.9.1",
+        "@material-ui/styles": "4.10.0",
+        "@material-ui/system": "4.9.14",
+        "react": "16.13.1",
+        "react-dom": "16.13.1",
+        "react-helmet": "6.0.0",
+        "react-router-dom": "5.1.2"
+    },
+    "devDependencies": {
+        "@craco/craco": "5.6.4",
+        "@testing-library/jest-dom": "5.11.4",
+        "@testing-library/react": "11.0.4",
+        "@testing-library/user-event": "12.1.6",
+        "@types/jest": "22.2.3",
+        "@types/node": "12.12.2",
+        "@types/react": "16.8.24",
+        "@types/react-dom": "16.0.5",
+        "@types/react-helmet": "5.0.6",
+        "@types/react-router-dom": "4.2.6",
+        "husky": "4.2.5",
+        "lint-staged": "10.2.2",
+        "prettier": "2.0.5",
+        "react-scripts": "3.4.1",
+        "typescript": "3.8.3"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "lint-staged": {
+        "*.{js,ts,tsx,md,html,css,json,xml,yml}": "prettier --write"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    }
 }
